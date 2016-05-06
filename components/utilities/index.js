@@ -3,9 +3,6 @@
  *  
  */
 
-var config = require('../../config');
-var tweet = require('../tweets');
-
 module.exports = {
   // Useful for outputting timestamps to the console for actions from our robot.
   currentTime: function() {

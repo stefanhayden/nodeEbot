@@ -28,6 +28,12 @@ module.exports = {
     // and to prevent it from replying to itself
     robotName: "MyTwitterRobot",
 
+		// The absolute path to your robot's source for new 
+		// tweets. Each line will be treated as a separate and 
+		// unique sentence. If none is provided there is a
+		// small default file that will be used.
+		corpus: '',
+
     // Interval for new tweets in seconds. Most users will 
     // probably want to tweet once every hour or so, 
     // that way the bot isn't too spammy. (1 hour = 3600 seconds);

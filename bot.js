@@ -12,7 +12,13 @@
 *   Import the robot component.
 *   This is where all the business logic is handeled.
 */
-var robot = require('./components/robot');
+var _ = require('lodash');
+var defaultConfig = require('./config');
+var Robot = require('./components/robot');
 
 // Fire up the robot!
-robot.init();
+module.exports = function(userConfig) {
+	config = _.merge(defaultConfig, userConfig);
+
+	return new Robot(config)
+}
