@@ -76,9 +76,14 @@ Tweets.prototype.watchStream = function (mode) {
 				//return;
 			}
 
+			stream.on('end', function() {
+				console.log('The stream has ended.');
+				throw error;
+			});
+
 			stream.on('error', function(error) {
 				console.log('Error detected with streaming API.');
-				console.log(error);
+				throw error;
 			});
 		});
 	} else if (!this.config.settings.monitorStream) {

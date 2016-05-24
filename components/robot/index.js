@@ -128,7 +128,7 @@ Robot.prototype.robotTasks = function() {
 	/*
 	*  Check if the Twitter Stream dropped. If so, reinitialize it.
 	*/
-	this.tweet.checkStream();
+	//this.tweet.checkStream();
 
 	/*
 	*   Check for new followers
